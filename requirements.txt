@@ -24,6 +24,10 @@ matplotlib==3.10.0
 seaborn==0.13.2
 umap-learn==0.5.7
 
+# -----GoogleSheets & Pandas integration
+gspread
+gspread-dataframe
+
 # ---- NLP utilities ----
 nltk    # for FreqDist; download corpora at runtime if needed
 

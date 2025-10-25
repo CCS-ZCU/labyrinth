@@ -99,3 +99,20 @@ def run_classifier(emb, classifier, y, cv):
     acc = accuracy_score(y, y_pred)
     f1 = f1_score(y, y_pred, average="macro")
     return y_pred, acc, f1
+
+unique_lbls = ["mythological",
+               "technical_literal",
+               "confusion_metaphorics",
+               "scientific_complexity_metaphorics",
+               "medical_anatomical",
+               "ambiguous_indeterminate"]
+
+
+palette = {
+    "mythological": "#1E40AF", # "#7D3FB2",  # Regal violet — imaginative, mythic depth
+    "technical_literal": "#7D3FB2", # "#C68E17",  # Golden ochre — tangible, crafted, architectural
+    "confusion_metaphorics":  "#228B68",  # Emerald teal — organic, physiological clarity
+    "scientific_complexity_metaphorics": "#C68E17", #"#1E40AF",  # Deep royal blue — intellectual, analytical
+    "medical_anatomical": "#C24130",  # Burnt orange-red — emotional, human, entangled
+    "ambiguous_indeterminate": "#6B7280",  # Neutral slate gray — uncertain, indeterminate
+}

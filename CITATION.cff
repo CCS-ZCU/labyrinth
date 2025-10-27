@@ -1,18 +1,28 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-references:
-  - type: "software"
-authors: 
-  affiliation: ""
-      family-names: ""
-      given-names: ""
-      orcid: ""-
-license: cc-by-nc-4.0
-repository-code: ""
-title: ""
-version:
-doi: 
-date-released: 2023-04-27
-abstract: ""
+title: "labyrinth
+description: ""
+license: "CC-BY-SA-4.0"
+repository-code: "https://github.com/ccs-zcu/labyrinth"  # optional but recommended if public
 keywords:
-  - ""
+  - labyrinth
+  - word sense disambiguation
+  - digital Latin philology
+  - early modern science
+  - computational history
+  - historical semantics
+funding:
+  - name: "TOME (LL2320), funded by the Ministry of Education, Youth and Sports, Czech Republic"
+authors:
+  - family-names: "Kaše"
+    given-names: "Vojtěch"
+    affiliation: "Institute of Philosophy of the Czech Academy of Sciences"
+    orcid: "0000-0002-6601-1605"
+  - family-names: "Lang"
+    given-names: "Sarah"
+    affiliation: "Max Planck Institute for the History of Science"
+    orcid: "0000-0002-4618-9481"
+  - family-names: "Pavlas"
+    given-names: "Petr"
+    affiliation: "Institute of Philosophy of the Czech Academy of Sciences"
+    orcid: "0000-0001-9848-4995"

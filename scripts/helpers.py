@@ -28,6 +28,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score, f1_score
+from sklearn.base import clone
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 import pandas as pd
@@ -90,15 +91,23 @@ def merge_embeddings(embs, method="mean", weights=None) -> np.ndarray:
     else:
         raise ValueError(f"Unknown method: {method}")
 
-def run_classifier(emb, classifier, y, cv):
+def run_classifier(emb, classifier, y, cv, return_model=False):
     if isinstance(emb, str):
         X = load_embedding(emb)
     else:
         X = merge_embeddings(emb, method="concat")
+
+    # Cross-validated predictions (evaluation)
     y_pred = cross_val_predict(classifier, X, y, cv=cv)
     acc = accuracy_score(y, y_pred)
     f1 = f1_score(y, y_pred, average="macro")
-    return y_pred, acc, f1
+
+    model = None
+    if return_model:
+        # train on the full data to get a deployable model
+        model = clone(classifier).fit(X, y)
+
+    return y_pred, acc, f1, model
 
 unique_lbls = ["mythological",
                "technical_literal",

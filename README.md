@@ -2,6 +2,9 @@
 
 This repository contains all scripts used for analyses introduced in the paper "Embedded in the Labyrinth: Investigating Latin Word Senses through Transformer-Based Contextual Embeddings and Attention", accepted for the 2025 CHR conference. 
 
+To get to the version of the code as presented in the article, please refer to release `v1.0`.
+
+
 ## Authors
 * Vojtěch Kaše [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-6601-1605)
 * Sarah Lang  [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-4618-9481)

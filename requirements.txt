@@ -28,6 +28,9 @@ umap-learn==0.5.7
 gspread
 gspread-dataframe
 
+spacy
+unidecode
+
 # ---- NLP utilities ----
 nltk    # for FreqDist; download corpora at runtime if needed
 
